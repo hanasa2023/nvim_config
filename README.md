@@ -4,9 +4,9 @@
 | ```gbc``` | Block-comment toggle keymap | Normal mode |
 | ```gc``` | Line-comment toggle keymap | Normal & Visual mode |
 | ```gb``` | Block-comment toggle keymap | Normal & Visual mode |
-| ```gcO``` | Add comment on the line above | |
-| ```gco``` | Add comment on the line below | |
-| ```gcA``` | Add comment at the end of line | |
+| ```gcO``` | Add comment on the line above | Normal mode |
+| ```gco``` | Add comment on the line below | Normal mode |
+| ```gcA``` | Add comment at the end of line | Normal mode |
 | ```<c-g>``` | Open LazyGit | |
 | ```<leader>h``` |  Displays hover information about the symbol under the cursor in a floating window. Calling the function twice will jump into the floating window. | Normal mode |
 | ```gd``` | Jump to the detail page in this window | Normal mode |
@@ -20,8 +20,8 @@
 | ```<leader>-``` |  Move to the previous diagnostic in the current buffer  | Normal mode |
 | ```<leader>=``` |  Move to the next diagnostic in the current buffer | Normal mode |
 | ```<leader>c``` | Dismiss all notification windows currently displayed | Normal mode |
-| ```ysiw)``` | Surround Words | Normal mode (')'can be changed by any symbol)|
-| ```ds)``` | Remove words from the surrounds | Normal mode (')' can be changed by any symbol)|
+| ```ysiw)``` | Surround Words | Normal mode (')'can be changed by any symbol) |
+| ```ds)``` | Remove words from the surrounds | Normal mode (')' can be changed by any symbol) |
 | ```<c-p>``` | Find files | Normal mode |
 | ```<c-h>``` | Old files | Normal mode |
 | ```z=``` | Spell suggests | Normal mode |
@@ -31,7 +31,7 @@
 | ```<c-h>``` | Show shortcut in telescope search window | In search window |
 | ```<c-n>``` | Init selection | Normal mode |
 | ```<c-n>``` | Node incremental | After selection init |
-| ```<c-h>``` | Node incremental | After selection init |
+| ```<c-h>``` | Node decremental | After selection init |
 | ```<c-l>``` | Scope incremental | After selection |
 | ```[c``` | Go to context start | Normal mode |
 | ```]c``` | Select next context | Normal mode |
