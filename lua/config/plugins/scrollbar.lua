@@ -20,6 +20,7 @@ hi! ScrollbarGitDeleteHandle guifg=#FF7B7B ]])
 		})
 		require("scrollbar.handlers.search").setup({})
 		require("scrollbar.handlers.gitsigns").setup()
+		require('scrollbar.handlers.cursor').setup()
 		require("scrollbar").setup({
 			show = true,
 			handle = {
