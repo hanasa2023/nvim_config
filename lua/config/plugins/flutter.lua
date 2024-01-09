@@ -6,5 +6,5 @@ return {
 		'stevearc/dressing.nvim',
 	},
 	config = true,
-	vim.keymap.set('n', '<leader>k', '<cmd>Telescope flutter commands<CR>')
+	vim.keymap.set('n', '<leader>k', '<cmd>Telescope flutter commands<CR>'),
 }
