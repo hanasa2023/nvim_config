@@ -46,4 +46,5 @@ require('lazy').setup({
 	require('config.plugins.toggleterm'),
 	-- require('config.plugins.startup'),
 	require('config.plugins.neo-tree'),
+	require('config.plugins.virtual-env'),
 })
