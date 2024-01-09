@@ -37,6 +37,7 @@ return {
 		vim.fn.sign_define("DiagnosticSignHint",
 			{ text = "󰌵", texthl = "DiagnosticSignHint" })
 
+
 		require("neo-tree").setup({
 			close_if_last_window = true, -- Close Neo-tree if it is the last window left in the tab
 			popup_border_style = "rounded",
@@ -192,6 +193,10 @@ return {
 			},
 			nesting_rules = {},
 			filesystem = {
+				bind_to_cwd = true, -- true creates a 2-way binding between vim's cwd and neo-tree's root
+				cwd_target = {
+					sidebar = "tab", -- sidebar is when position = left or right
+				},
 				filtered_items = {
 					visible = false, -- when true, they will just be displayed differently than normal items
 					hide_dotfiles = true,
@@ -226,7 +231,7 @@ return {
 				-- "open_current",  -- netrw disabled, opening a directory opens within the
 				-- window like netrw would, regardless of window.position
 				-- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
-				use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
+				use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
 				-- instead of relying on nvim autocmd events.
 				window = {
 					mappings = {

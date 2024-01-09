@@ -9,6 +9,8 @@ local preview_stack_trace = function()
 		vim.cmd(":wincmd j")
 	end
 end
+
+
 return {
 	setup = function(lsp)
 		vim.api.nvim_create_autocmd("BufEnter", {
@@ -29,6 +31,13 @@ return {
 				border = "rounded",
 				notification_style = 'nvim-notify'
 			},
+			decorations = {
+				statusline = {
+					app_version = false,
+					device = true,
+					project_config = false,
+				}
+			},
 			lsp = {
 				on_attach = function()
 					vim.cmd('highlight! link FlutterWidgetGuides Comment')
@@ -46,7 +55,7 @@ return {
 				},
 			},
 			dev_log = {
-				enabled = true,
+				enabled = false,
 				notify_errors = true, -- if there is an error whilst running then notify the user
 				open_cmd = "e",   -- command to use to open the log buffer
 			},
@@ -67,6 +76,12 @@ return {
 				register_configurations = function(_)
 					local dap = require("dap")
 					-- vim.notify(dap.configurations.dart)
+					-- local workspaceFolder = vim.fs.dirname(
+					local pubspecFile = vim.fs.find('pubspec.yaml',
+						{ upward = true, path = vim.fs.dirname(vim.api.nvim_buf_get_name(0)) })
+					-- vim.notify(pubspecFile)
+					local workspaceFolder = vim.fs.dirname(pubspecFile[1])
+					-- vim.notify({ workspaceFolder })
 					if not dap.configurations.dart then
 						dap.adapters.dart = {
 							type = "executable",
@@ -80,12 +95,14 @@ return {
 								request = "launch",
 								name = "Launch Flutter Program",
 								-- The nvim-dap plugin populates this variable with the filename of the current buffer
-								program = "lib/main.dart",
+								program = workspaceFolder .. "/lib/main.dart",
 								-- program = "${file}",
 								-- The nvim-dap plugin populates this variable with the editor's current working directory
-								cwd = "${workspaceFolder}",
+								-- dartSdkPath = "/home/hanasa/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
+								-- flutterSdkPath = "/home/hanasa/flutter/bin/flutter",      -- ensure this is correct
+								cwd = workspaceFolder,
 								-- This gets forwarded to the Flutter CLI tool, substitute `linux` for whatever device you wish to launch
-								toolArgs = { "-d", "macos" }
+								-- toolArgs = { "-d", "linux" }
 							}
 						}
 					end

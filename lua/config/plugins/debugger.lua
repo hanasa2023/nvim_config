@@ -5,6 +5,7 @@ local compile = function()
 		os.execute("gcc " .. vim.fn.expand("%") .. " -g -o " .. vim.fn.expand("%<"))
 	end
 end
+
 return {
 	{
 		"mfussenegger/nvim-dap",
@@ -20,7 +21,7 @@ return {
 			},
 			"theHamsta/nvim-dap-virtual-text",
 			"rcarriga/nvim-dap-ui",
-			"nvim-dap-virtual-text",
+			-- "nvim-dap-virtual-text",
 			"nvim-telescope/telescope-dap.nvim",
 		},
 		config = function()
@@ -31,8 +32,8 @@ return {
 			require("nvim-dap-virtual-text").setup()
 
 			dap.listeners.after.event_initialized["dapui_config"] = dapui.open
-			-- dap.listeners.before.event_terminated["dapui_config"] = dapui.close
-			-- dap.listeners.before.event_exited["dapui_config"] = dapui.close
+			dap.listeners.before.event_terminated["dapui_config"] = dapui.close
+			dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
 			local m = { noremap = true }
 			vim.keymap.set("n", "<leader>'t", dap.toggle_breakpoint, m)
@@ -87,38 +88,6 @@ return {
 			}
 			dap.configurations.c = dap.configurations.cpp
 			dap.configurations.rust = dap.configurations.cpp
-
-			-- Dart / Flutter
-			dap.adapters.dart = {
-				type = 'executable',
-				command = 'dart',
-				args = { 'debug_adapter' }
-			}
-			dap.adapters.flutter = {
-				type = 'executable',
-				command = 'flutter',
-				args = { 'debug_adapter' }
-			}
-			dap.configurations.dart = {
-				{
-					type = "dart",
-					request = "launch",
-					name = "Launch dart",
-					dartSdkPath = "/home/hanasa/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
-					flutterSdkPath = "/home/hanasa/flutter/bin/flutter",         -- ensure this is correct
-					program = "${workspaceFolder}/lib/main.dart",                -- ensure this is correct
-					cwd = "${workspaceFolder}",
-				},
-				{
-					type = "flutter",
-					request = "launch",
-					name = "Launch flutter",
-					dartSdkPath = "/home/hanasa/flutter/bin/cache/dart-sdk/bin/dart", -- ensure this is correct
-					flutterSdkPath = "/home/hanasa/flutter/bin/flutter",         -- ensure this is correct
-					program = "${workspaceFolder}/lib/main.dart",                -- ensure this is correct
-					cwd = "${workspaceFolder}",
-				}
-			}
 
 			dap.adapters.kotlin = {
 				type = "executable",
