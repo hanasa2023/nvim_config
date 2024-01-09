@@ -5,7 +5,7 @@ return {
 		vim.notify = notify
 		notify.setup({
 			on_open = function(win)
-				vim.api.nvim_win_set_config(win, { border = "none" })
+				vim.api.nvim_win_set_config(win, { border = "rounded" })
 			end,
 			background_colour = "#202020",
 			fps = 60,
