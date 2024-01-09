@@ -54,3 +54,5 @@
 | ```<leader>1-9``` | Quick jump to the 1-9 tab page | Normal mode |
 | ```<leader>0``` | Quick jump to the last tab page | Normal mode |
 | ```<leader>k``` | Open flutter command palette | Normal mode |
+| ```<leader>vs``` | open VenvSelector to pick a venv | Normal mode |
+| ```<leader>vc``` | retrieve the venv from a cache | Normal mode |
