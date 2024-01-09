@@ -50,3 +50,5 @@
 | ```<c-k>``` | Move block up | Visual mode |
 | ```<c-t>``` | Open neotree | Normal mode |
 | ```<c-c>``` | Close neotree | Normal mode |
+| ```<leader>g``` | Open terminal in cwd | Normal mode |
+| ```<c-f>``` | Find word in file | Normal mode |

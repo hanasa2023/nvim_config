@@ -309,4 +309,3 @@ return {
 		vim.keymap.set('n', '<c-c>', ':Neotree close<CR>')
 	end
 }
--- TODO: 完成在新标签页打开文件的操作

@@ -5,11 +5,25 @@ return {
 	opts = {
 		options = {
 			mode = "tabs",
+			numbers = 'ordinal',
 			diagnostics = "nvim_lsp",
 			diagnostics_indicator = function(count, level, diagnostics_dict, context)
 				local icon = level:match("error") and " " or " "
 				return " " .. icon .. count
 			end,
+			custom_filter = function(buf_number, buf_numbers)
+				if vim.fn.bufname(buf_number) and vim.bo[buf_number].filetype ~= 'wiki' then
+					return true
+				end
+			end,
+			offsets = {
+				{
+					filetype = 'neo-tree',
+					text = 'Hanasa\'s file explore',
+					text_align = 'left',
+					separator = true,
+				}
+			},
 			indicator = {
 				icon = '▎', -- this should be omitted if indicator style is not 'icon'
 				-- style = 'icon' | 'underline' | 'none',

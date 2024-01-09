@@ -15,7 +15,8 @@ return {
 		'akinsho/toggleterm.nvim',
 		version = "*",
 		opts = {
-			vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()')
+			vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()'),
+			vim.keymap.set('n', '<leader>g', ':ToggleTerm dir=%:p:h<CR>', { buffer = 0 })
 		}
 	},
 }
