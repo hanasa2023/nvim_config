@@ -52,3 +52,5 @@
 | ```<c-c>``` | 关闭Neo-tree | Normal mode |
 | ```<leader>g``` | 在当前文件夹中打开终端 | Normal mode |
 | ```<c-f>``` | 在文件中查找单词 | Normal mode |
+| ```<leader>1-9``` | 跳转到第1-9个标签页 | Normal mode |
+| ```<leader>0``` | 跳转到倒数第一个标签页 | Normal mode |
