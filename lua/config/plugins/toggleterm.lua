@@ -16,7 +16,7 @@ return {
 		version = "*",
 		opts = {
 			vim.cmd('autocmd! TermOpen term://*toggleterm#* lua set_terminal_keymaps()'),
-			vim.keymap.set('n', '<leader>g', ':ToggleTerm dir=%:p:h<CR>', { buffer = 0 })
+			vim.keymap.set('n', '<leader>j', ':ToggleTerm dir=%:p:h<CR>', { buffer = 0 })
 		}
 	},
 }
