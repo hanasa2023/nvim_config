@@ -50,7 +50,7 @@
 | ```<c-k>``` | 将当前块向上移动 | Visual mode |
 | ```<c-t>``` | 打开Neo-tree | Normal mode |
 | ```<c-c>``` | 关闭Neo-tree | Normal mode |
-| ```<c-j>``` | 在当前文件夹中打开终端 | Normal mode |
+| ```<leader>j``` | 在当前文件夹中打开终端 | Normal mode |
 | ```<c-f>``` | 在文件中查找单词 | Normal mode |
 | ```<leader>1-9``` | 跳转到第1-9个标签页 | Normal mode |
 | ```<leader>0``` | 跳转到倒数第一个标签页 | Normal mode |

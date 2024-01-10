@@ -1,5 +1,6 @@
 | Shortcut | Action | Scope |
-| --- | --- | --- | | ```gcc``` | Line-comment toggle keymap | Normal mode |
+| --- | --- | --- |
+| ```gcc``` | Line-comment toggle keymap | Normal mode |
 | ```gbc``` | Block-comment toggle keymap | Normal mode |
 | ```gc``` | Line-comment toggle keymap | Normal & Visual mode |
 | ```gb``` | Block-comment toggle keymap | Normal & Visual mode |
@@ -49,7 +50,7 @@
 | ```<c-k>``` | Move block up | Visual mode |
 | ```<c-t>``` | Open neotree | Normal mode |
 | ```<c-c>``` | Close neotree | Normal mode |
-| ```<c-j>``` | Open terminal in cwd | Normal mode |
+| ```<leaer>j``` | Open terminal in cwd | Normal mode |
 | ```<c-f>``` | Find word in file | Normal mode |
 | ```<leader>1-9``` | Quick jump to the 1-9 tab page | Normal mode |
 | ```<leader>0``` | Quick jump to the last tab page | Normal mode |
