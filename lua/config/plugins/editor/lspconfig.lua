@@ -69,7 +69,7 @@ M.config = {
 			lsp.on_attach(function(client, bufnr)
 				lsp.default_keymaps({ buffer = bufnr })
 				client.server_capabilities.semanticTokensProvider = nil
-				require("config.plugins.autocomplete").configfunc()
+				require("config.plugins.utils.autocomplete").configfunc()
 				if vim.bo[bufnr].filetype ~= "dart" then
 					require("lsp_signature").on_attach(F.signature_config, bufnr)
 				end

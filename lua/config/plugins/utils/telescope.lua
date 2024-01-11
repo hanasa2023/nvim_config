@@ -137,7 +137,7 @@ telescope.config = {
 			})
 			vim.keymap.set('n', '<c-q>', require("commander").show, mode)
 			commander.add(
-				require('config.plugins.commands')
+				require('config.plugins.utils.commands')
 			)
 		end
 	}
