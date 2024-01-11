@@ -13,5 +13,11 @@ return {
 			extra_groups = {}, -- table: additional groups that should be cleared
 			exclude_groups = {}, -- table: groups you don't want to clear
 		})
+		vim.keymap.set('n', '<leader>r',
+			function()
+				require('config.plugins.utils.trans_toggle').trans_toggle()
+				vim.notify('Successfully toggle transparent')
+			end
+		)
 	end
 }
