@@ -32,8 +32,8 @@ return {
 			require("nvim-dap-virtual-text").setup()
 
 			dap.listeners.after.event_initialized["dapui_config"] = dapui.open
-			dap.listeners.before.event_terminated["dapui_config"] = dapui.close
-			dap.listeners.before.event_exited["dapui_config"] = dapui.close
+			-- dap.listeners.before.event_terminated["dapui_config"] = dapui.close
+			-- dap.listeners.before.event_exited["dapui_config"] = dapui.close
 
 			local m = { noremap = true }
 			vim.keymap.set("n", "<leader>'t", dap.toggle_breakpoint, m)

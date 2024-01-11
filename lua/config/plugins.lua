@@ -44,7 +44,6 @@ require('lazy').setup({
 	require('config.plugins.markdown'),
 	require('config.plugins.joshuto'),
 	require('config.plugins.toggleterm'),
-	-- require('config.plugins.startup'),
 	require('config.plugins.neo-tree'),
 	require('config.plugins.virtual-env'),
 	require('config.plugins.copilot'),
