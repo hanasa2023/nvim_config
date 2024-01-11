@@ -47,4 +47,5 @@ require('lazy').setup({
 	require('config.plugins.ui.neo-tree'),
 	require('config.plugins.utils.virtual-env'),
 	require('config.plugins.editor.copilot'),
+	require('config.plugins.utils.transparent'),
 })
