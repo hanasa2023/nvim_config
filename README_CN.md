@@ -57,3 +57,10 @@
 | ```<leader>k``` | 打开flutter命令面板 | Normal mode |
 | ```<leader>vs``` | 打开虚拟环境选择器以选择一个虚拟环境 | Normal mode |
 | ```<leader>vc``` | 从缓存中检索虚拟环境 | Normal mode |
+| ```<leader>go``` | 打开copilot面板 | Normal mode |
+| ```<leader>ge``` | 打开copilot | Normal mode |
+| ```<leader>gd``` | 禁用copilot | Normal mode |
+| ```<c-p>``` | 显示copilot建议 | Insert mode |
+| ```<c-n>``` | Copilot-next | Insert mode |
+| ```<c-l>``` | Copilot-previous | Insert mode |
+| ```<c-c>``` | 接受copilot建议 | Insert mode |

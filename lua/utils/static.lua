@@ -234,3 +234,4 @@ M.icons = setmetatable({
 -- stylua: ignore end
 
 return M
+--

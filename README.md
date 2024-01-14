@@ -55,5 +55,12 @@
 | ```<leader>1-9``` | Quick jump to the 1-9 tab page | Normal mode |
 | ```<leader>0``` | Quick jump to the last tab page | Normal mode |
 | ```<leader>k``` | Open flutter command palette | Normal mode |
-| ```<leader>vs``` | open VenvSelector to pick a venv | Normal mode |
-| ```<leader>vc``` | retrieve the venv from a cache | Normal mode |
+| ```<leader>vs``` | Open VenvSelector to pick a venv | Normal mode |
+| ```<leader>vc``` | Retrieve the venv from a cache | Normal mode |
+| ```<leader>go``` | Open Copilot panel | Normal mode |
+| ```<leader>ge``` | Enable copilot | Normal mode |
+| ```<leader>gd``` | Disable copilot | Normal mode |
+| ```<c-p>``` | Show copilot suggests | Insert mode |
+| ```<c-n>``` | Copilot-next | Insert mode |
+| ```<c-l>``` | Copilot-previous | Insert mode |
+| ```<c-c>``` | Accept copilot suggests | Insert mode |

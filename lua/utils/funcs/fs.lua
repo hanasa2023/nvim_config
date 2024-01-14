@@ -31,3 +31,4 @@ function M.proj_dir(fpath, patterns)
 end
 
 return M
+--
